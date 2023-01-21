@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.mainBody {
+  background: url('../imgs/bg1.jpg') center / cover;
+}
+hr.divider-light {
+  border-top: 0; /*this line of code remove the initiale decoration of a hr in bootstrap*/
+  height: 0.2rem;
+  background-color: #ffffff;
+  opacity: 1;
+  display: flex;
+}
+hr.divider-dark {
+  border-top: 0; /*this line of code remove the initiale decoration of a hr in bootstrap*/
+  height: 0.2rem;
+  width: 5rem;
+  margin: 1.5rem auto;
+  background-color: rgb(54, 54, 54);
+  opacity: 1;
+}
+.connection-section {
+  padding: 4.4rem 0;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.submit-button {
+  background-color: rgb(229, 151, 151);
+  border: none;
+}
+.submit-button:hover {
+  background-color: rgb(243, 201, 201);
+  transition: .5s;
+}
+.return-button {
+  background-color: rgb(229, 151, 151);
+  border: none;
+}
+.return-button a:hover {
+  text-decoration: none;
+}
+.return-button:hover {
+  background-color: rgb(203, 90, 90);
+  transition: .5s;
+}
+.head {
+  justify-content: center;
+}
+.authentification-section {
+  padding: 2rem 0;
+}
+.polite-message a {
+  color: rgb(18, 1, 249);
+  font-weight: 500;
+  text-decoration: underline;
+}
+textarea {
+  height: 120px!important;
+}
+/* home style */
+.charts {
+  background-color:lavender;
+  border: none;
+}
+.to-do {
+  background-color: rgb(199, 199, 246);
+  height: 500px;
+  overflow: scroll;
+}
+/* markers */
+.marker-to_do {
+  background-color:red;
+  border-top: 0;
+  width: 100%;
+  height: 5px;
+}
+.marker-doing {
+  background-color: rgb(65, 65, 245);
+  border-top: 0;
+  width: 100%;
+  height: 5px;
+}
+.marker-done {
+  background-color: rgb(45, 203, 45);
+  border-top: 0;  
+  width: 100%;
+  height: 5px;
+}
+.task-styled {
+  background-color: #fff;
+  border: red 2px solid
+}
+.add-tasks {
+  background-color: rgb(199, 199, 246);
+  width: 150px;
+}
+.add-tasks:hover {
+  background-color: rgb(154, 154, 251);
+  transition: 1s;
+}
+.search-group {
+  width: 50%;
+}
+.search-button {
+  background-color: rgb(185, 185, 254)!important;
+  border-color:  rgb(199, 199, 246)!important;
+}
+.search-button:hover {
+  background-color: rgb(177, 177, 255)!important;
+}
+.adding-task {
+  background-color: rgb(214, 236, 255);
+}
+.add-task-button {
+  background-color: rgb(89, 177, 255);
+  color: white;
+  border: none;
+}
+.add-task-button:hover {
+  background-color: rgb(187, 223, 255);
+  transition: .5s;
+}
+.add-task-return {
+  background-color: rgb(89, 177, 255);
+  color: white;
+  border: none;
+}
+.add-task-return {
+  background-color: rgb(40, 143, 232);
+  transition: .5s;
+}
+.operations i{
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.update {
+  margin-right: 5px;
+}
+.delete {
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  .connection-section {
+    padding: 13rem 0;
+  }
+  .authentification-section {
+    background: url('../imgs/bg1.jpg') center / cover;
+    padding: 8rem 0;
+  }
+  .to-do {
+    overflow: hidden; 
+    width: 90%;
+  }
+  .add-tasks {
+    width: 140px;
+    font-size: 1.2rem;
+    /* margin-left: 20%; */
+  }
+  .single {
+    margin-bottom: 15%!important;
+  }
+  .top-section {
+    flex-direction: column!important;
+  }
+  .search-group {
+    width: 100%;
+  }
+  .to-do {
+    height: 300px;
+    overflow: scroll;
+  }
+}
