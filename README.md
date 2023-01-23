@@ -1,2 +1,2 @@
 # TaskManager
-simple, user-friendly and awsome tasks manager
+simple, user-friendly and awesome tasks manager
