@@ -58,6 +58,21 @@ class Task {
         return $result;
     }
 
+    // adding multiple tasks
+    public function addTasks($id_user, $count, $title, $description, $status, $deadLine){
+      $object = new Database;
+      $connection = $object->connection();
+  
+      $stmt = $connection->prepare("INSERT INTO task(`id_client`, `title`, `description`, `status`, `deadLine`) VALUES ( ?, ?, ?, ?, ?)");
+      for($i = 0; $i < $count; $i++){
+        $stmt->bind_param('issss', $id_user, $title[$i], $description[$i], $status[$i], $deadLine[$i]);
+        $result = $stmt->execute();
+      }
+      $stmt->close();
+
+      return $result;
+    }
+
   // updating function
   public function update($id_task, $title, $description, $status, $deadLine){
 

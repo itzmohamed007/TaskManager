@@ -107,6 +107,16 @@ textarea {
   background-color: rgb(154, 154, 251);
   transition: 1s;
 }
+.encrease-by-one {
+  background-color: rgb(214, 236, 255);
+  width: 150px;
+  color: rgb(0, 0, 0);
+}
+.encrease-by-one:hover {
+  background-color: rgb(89, 177, 255);
+  color: rgb(214, 236, 255);
+  transition: .5s;
+}
 .search-group {
   width: 50%;
 }
@@ -119,6 +129,8 @@ textarea {
 }
 .adding-task {
   background-color: rgb(214, 236, 255);
+  max-height: 500PX;
+  overflow: scroll;
 }
 .add-task-button {
   background-color: rgb(89, 177, 255);
@@ -173,7 +185,6 @@ textarea {
   .add-tasks {
     width: 140px;
     font-size: 1.2rem;
-    /* margin-left: 20%; */
   }
   .single {
     margin-bottom: 15%!important;

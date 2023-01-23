@@ -78,7 +78,7 @@ class FrontOffice extends Controller {
         $this->view('forms/addTask');
 
         if(isset($_POST['submit'])){
-            $title = $_POST['title'];
+            $title = ucwords($_POST['title']);
             $description = $_POST['description'];
             $status = 'To-do';
             $deadLine = $_POST['deadLine'];
@@ -97,6 +97,38 @@ class FrontOffice extends Controller {
 
     // adding multipla tasks
     public function addTasks(){
+        if(isset($_POST['submit'])){
+            $count = $_POST['number'];
+
+            if($count == ""){
+                header('location: addTasks');
+            }
+
+            $id_user = $_SESSION['client'];
+
+            $title = [];
+            $description = [];
+            $status = [];
+            $deadLine = [];
+
+            for($i = 0; $i < $count; $i++){
+                $title[$i] = $_POST["title$i"];
+                $description[$i] = $_POST["description$i"];
+                $status[$i] = 'To-do';
+                $deadLine[$i] = $_POST["deadLine$i"];
+            }
+
+            $object = $this->model('Task');
+            
+            $result = $object->addTasks($id_user, $count, $title, $description, $status, $deadLine);
+
+            if($result){
+                header('location: home');
+            } else {
+                die('an error occured while sending data to database'); 
+            }
+        }
+
         $this->view('forms/addMultipleTasks');
     }
 
